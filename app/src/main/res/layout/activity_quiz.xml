@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:background="#FF038CF4"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#51A4E4">
+        <ImageView
+            android:id="@+id/back_pressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/back_button" />
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#AECCE4"
+    android:alpha="0.9"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/question"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo_bhai"
+        android:text="Question is"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <Button
+        android:theme="@style/Theme.Onlineexam1"
+        android:layout_width="match_parent"
+        android:id="@+id/optiona"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/roundshape"
+        android:clickable="false"
+        android:fontFamily="@font/aleo_italic"
+        android:text="Option A"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <Button
+        android:theme="@style/Theme.Onlineexam1"
+        android:layout_width="match_parent"
+        android:id="@+id/optionb"
+        android:fontFamily="@font/aleo_italic"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/roundshape"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:clickable="false"
+        android:layout_marginRight="10dp"
+        android:text="Option B"/>
+
+    <Button
+        android:textStyle="bold"
+        android:id="@+id/optionc"
+        android:theme="@style/Theme.Onlineexam1"
+        android:fontFamily="@font/aleo_italic"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="14sp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/roundshape"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:clickable="false"
+        android:layout_marginRight="10dp"
+        android:text="Option C"/>
+    <Button
+        android:textStyle="bold"
+        android:theme="@style/Theme.Onlineexam1"
+
+        android:id="@+id/optiond"
+        android:fontFamily="@font/aleo_italic"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/roundshape"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:clickable="false"
+        android:layout_marginRight="10dp"
+        android:text="Option D"/>
+
+<TextView
+    android:text=""
+    android:textAlignment="center"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/war3"
+    android:textColor="@color/black"
+    android:layout_marginTop="25dp"
+    android:fontFamily="@font/abeezee"
+    android:textSize="19sp"
+    />
+</LinearLayout>
+</LinearLayout>

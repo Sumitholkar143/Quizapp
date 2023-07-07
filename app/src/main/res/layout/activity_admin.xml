@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:visibility="visible"
+    tools:context=".admin"
+    tools:visibility="visible">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        tools:context=".userinterface">
+
+
+        <!-- add RadioGroup which contain the many RadioButton-->
+
+
+        <!-- add button For Submit the Selected item-->
+
+
+        <!-- add clear button for clear the selected item-->
+
+        <TextView
+
+            android:id="@+id/question"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:text="Question"
+            android:textColor="#DD101010"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/count1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="90dp"
+            android:textColor="#DD101010"
+            android:text="Option A"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:textColor="#DD101010"
+            android:id="@+id/count6"
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+
+            android:layout_marginTop="130dp"
+
+            android:text="Option B"
+
+
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/count2"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="170dp"
+
+            android:text="Option C"
+
+            android:textColor="#DD101010"
+
+
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:textColor="#DD101010"
+            android:id="@+id/count3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="210dp"
+            android:text="Option D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/count5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="250dp"
+            android:text="Option R"
+            android:textColor="#DD101010"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <Button
+
+            android:id="@+id/submit1"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+
+            android:layout_marginTop="310dp"
+
+            android:text="insert"
+
+            android:textSize="20sp"
+
+            android:textStyle="bold"
+
+            />
+
+        <EditText
+            android:id="@+id/question1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+        <EditText
+            android:id="@+id/oa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="85dp"
+            android:inputType="textPersonName"
+            android:text="" />
+        <EditText
+            android:id="@+id/ob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="125dp"
+            android:inputType="textPersonName"
+            android:text="" />
+        <EditText
+            android:id="@+id/oc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="165dp"
+            android:inputType="textPersonName"
+            android:text="" />
+        <EditText
+            android:id="@+id/od"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="205dp"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/ro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="245dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+
+
+        <!-- add clear button for clear the selected item-->
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

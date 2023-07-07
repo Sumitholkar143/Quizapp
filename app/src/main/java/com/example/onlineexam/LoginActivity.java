@@ -72,8 +72,6 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher {
             String isadmin;
             @Override
             public void onClick(View view) {
-                lbtn.setBackgroundColor(Color.GREEN);
-                lbtn.setBackgroundResource(R.drawable.roundshappegreen);
                 msg.setText("");
                 String sql = "SELECT * FROM " + Params.Stu_DB_NAME + " WHERE username=? and pass=?";
                 try {
@@ -123,7 +121,6 @@ public class LoginActivity extends AppCompatActivity implements TextWatcher {
 
     });
     }
-
      @Override
      public void onBackPressed(){
          if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {

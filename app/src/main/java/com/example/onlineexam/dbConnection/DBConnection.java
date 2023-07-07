@@ -19,10 +19,6 @@ public class DBConnection extends Thread {
      ResultSet rs;
       Statement st;
      String query;
-
-
-
-
     @Override
     public  void run(){
         if (s=="con"){

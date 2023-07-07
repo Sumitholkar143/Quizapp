@@ -23,6 +23,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.concurrent.Callable;
@@ -94,16 +95,29 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher {
                 StrictMode.setThreadPolicy(a);
                 try {
                     Connection c=DBConnection.getConnection();
+                    if (c==null){
+                        Toast.makeText(MainActivity2.this,"Error to connect host",Toast.LENGTH_LONG).show();
+                    }
                     Statement s=c.createStatement();
-                    String sql="INSERT INTO "+Params.Stu_DB_NAME+"(name,gmail,pass,username,number) VALUES ('"+name.getText().toString()+"','"+gmail.getText().toString()+"','"+pass.getText().toString()+"','"+username.getText().toString()+"','"+number.getText().toString()+"');";
-                    s.executeUpdate(sql);
-                    name.setText("");pass.setText(""); gmail.setText("");
+                    if (s.executeQuery("SELECT username FROM "+Params.Stu_DB_NAME+" where username='"+username.getText().toString()+"'").next()){
+                        tusername.setError("Username Already Registered");
+                        return;
+                    }
+                    PreparedStatement ps=c.prepareStatement("INSERT INTO ?(name,gmail,pass,username,number) VALUES (?,?,?,?,?)");
+                    ps.setString(1,Params.Stu_DB_NAME);
+                    ps.setString(2,name.getText().toString());
+                    ps.setString(3,gmail.getText().toString());
+                    ps.setString(4,pass.getText().toString());
+                    ps.setString(5,username.getText().toString());
+                    ps.setString(6,number.getText().toString());
+                    ps.executeUpdate();
                     c.close();
-                    Toast.makeText(MainActivity2.this,"Ragistration Susceesfully",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity2.this,"Registration Successfully",Toast.LENGTH_LONG).show();
                     startActivity(new Intent(MainActivity2.this,LoginActivity.class));
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 } catch (Exception e) {
                     e.printStackTrace();
+                    Toast.makeText(MainActivity2.this,"Registration fail due to some error",Toast.LENGTH_LONG).show();
 
                 }
             }
@@ -153,17 +167,16 @@ public class MainActivity2 extends AppCompatActivity implements TextWatcher {
             tusername.setError("Enter Valid Username");
             return false;
         }
-
         // All validation passed, username is valid
         return true;
     }
 
     public boolean validateNumber(){
-        if (((number.getText().toString().length())<10)&&(number.getText().toString().length())>10){
-        return true;
-        }
-        tnumber.setError("Enter 10 Digit Phone Number");
+        if (((number.getText().toString().length())<10)||(number.getText().toString().length())>10){
+            tnumber.setError("Enter 10 Digit Phone Number");
         return false;
+        }
+        return true;
    }
     public boolean validatePassword() {
         String password=pass.getText().toString();

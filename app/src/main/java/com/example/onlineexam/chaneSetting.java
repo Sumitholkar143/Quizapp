@@ -113,6 +113,9 @@ String text;
 
          try {
              Connection c = DBConnection.getConnection();
+             if (c==null){
+                 Toast.makeText(chaneSetting.this,"Error to connect host",Toast.LENGTH_LONG).show();
+             }
              Statement st1 = c.createStatement();
              Statement st2 = c.createStatement();
              Statement st3 = c.createStatement();
@@ -139,7 +142,6 @@ String text;
                      @Override
                      public void run() {
                             try {
-                                System.out.println("before query");
                             st3.executeUpdate(sql);
                         }catch (Exception e){
                             e.printStackTrace();

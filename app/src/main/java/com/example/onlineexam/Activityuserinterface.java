@@ -115,6 +115,9 @@ public class Activityuserinterface extends AppCompatActivity implements View.OnC
         StrictMode.setThreadPolicy(a);
         try {
             ca= DBConnection.getConnection();
+            if (ca==null){
+                Toast.makeText(Activityuserinterface.this,"Error to connect host",Toast.LENGTH_LONG).show();
+            }
             String sql;
             if (reciveQuestionid==1)
             sql="select * from "+ QPDBNAME +" where id<"+(reciveQuestionid*10+1);
